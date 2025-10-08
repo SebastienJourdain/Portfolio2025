@@ -27,7 +27,7 @@ export const projects = [
         '/projects/ecommerce/screenshot1.jpg',
         '/projects/ecommerce/screenshot2.jpg',
       ],
-      demoLink: 'https://demo.example.com',
+      demoLink: 'https://www.figma.com/design/hjSAKZjOaD66ZpUP8MO6rp/Wireframe---maquette-studio-131?node-id=201-541',
     },
     {
       id: 'acadenum',
@@ -42,7 +42,6 @@ export const projects = [
         '/projects/ecommerce/screenshot1.jpg',
         '/projects/ecommerce/screenshot2.jpg',
       ],
-      demoLink: 'https://demo.example.com',
     },
     {
       id: 'paroledecrabe',
@@ -57,7 +56,7 @@ export const projects = [
         '/projects/ecommerce/screenshot1.jpg',
         '/projects/ecommerce/screenshot2.jpg',
       ],
-      demoLink: 'https://demo.example.com',
+      demoLink: 'https://paroledecrabe.sebastienjourdain.com/',
     },
     {
       id: 'domainedelapierreronde',
@@ -72,7 +71,7 @@ export const projects = [
         '/projects/ecommerce/screenshot1.jpg',
         '/projects/ecommerce/screenshot2.jpg',
       ],
-      demoLink: 'https://demo.example.com',
+      demoLink: 'https://projetindiv.sebastienjourdain.com/',
     },
     {
       id: 'o80',
@@ -87,7 +86,6 @@ export const projects = [
         '/projects/ecommerce/screenshot1.jpg',
         '/projects/ecommerce/screenshot2.jpg',
       ],
-      demoLink: 'https://demo.example.com',
     },
   ]
   

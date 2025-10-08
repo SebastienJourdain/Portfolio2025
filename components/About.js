@@ -34,15 +34,16 @@ export default function About() {
         <div className="bg-cards rounded-2xl p-5 border border-cards leading-normal flex flex-col col-span-2 pt-13 justify-between">
           <p className="mb-6 text-dominante">
             Je m'appelle Sébastien Jourdain, j'ai 24 ans et je suis originaire
-            de la ville de Thann en Alsace. J'apprécie le Web et les domaines du
-            numérique, et je souhaite y évoluer dans ma vie professionnelle.
-            C’est pour cela que j’y ai étudié ces trois dernières années, dans
-            un premier temps en effectuant un DUT MMI (Métiers du multimédia et
-            de l’internet). J'aime également écouter de la musique et voyager.
-            Durant mes années de collège et de lycée, j'ai eu la chance
-            d'intégrer la section européenne anglais et de voyager en Écosse et
-            en Irlande, ce qui m'a permis de découvrir de nouvelles cultures et
-            d'améliorer mon anglais.
+            de la ville de Thann en Alsace. J'ai réalisé mes études dans le web 
+            en commençant par un DUT MMI (Métiers du multimédia et
+            de l’internet), puis une licence professionelle Webdesign tous deux
+            au département MMI de Montbéliard. J'ai par la suite souhaité 
+            entrer dans le monde du travail en intégrant la hotline de Euro Protection
+            Surveillance (homiris, télésurveillance pour particuliers) au sein de laquelle
+            j'ai réalisé mes objectifs durant 2 ans et demi. J'ai maintenant décidé de reprendre
+            mes études, et je suis depuis septembre en année préparatoire au Master en cybersécurité
+            de Epitech Strasbourg. Dans le cadre de ce cursus je recherche une alternance en cybersécurité
+            à partir de janvier 2026 et jusqu'à septembre 2028. N'hésitez pas a me contacter si mon profil vous intéresse !
           </p>
 
           <a
