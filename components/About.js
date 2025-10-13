@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useRef } from "react";
+
 export default function About() {
   const skills = [
     { name: "CSS", icon: "img/icones/css.svg" },
@@ -13,6 +16,65 @@ export default function About() {
     { name: "Next.js", icon: "img/icones/next.svg" },
   ];
 
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const photo = new Image();
+    photo.src = "img/photoprofil.png"; 
+    const illu = new Image();
+    illu.src = "img/illu.png"; 
+
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+
+    resizeCanvas();
+
+    photo.onload = () => {
+      ctx.drawImage(photo, 0, 0, canvas.width, canvas.height);
+    };
+
+    let fadeInterval;
+
+    // Effet gomme au survol
+    function handleMove(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.beginPath();
+      ctx.arc(x, y, 30, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalCompositeOperation = "source-over";
+
+      clearInterval(fadeInterval);
+    }
+
+    // Réapparition douce quand la souris part
+    function handleLeave() {
+      fadeInterval = setInterval(() => {
+        ctx.globalAlpha = 0.08;
+        ctx.drawImage(photo, 0, 0, canvas.width, canvas.height);
+        ctx.globalAlpha = 1;
+      }, 30);
+    }
+
+    canvas.addEventListener("mousemove", handleMove);
+    canvas.addEventListener("mouseleave", handleLeave);
+    window.addEventListener("resize", resizeCanvas);
+
+    return () => {
+      canvas.removeEventListener("mousemove", handleMove);
+      canvas.removeEventListener("mouseleave", handleLeave);
+      window.removeEventListener("resize", resizeCanvas);
+      clearInterval(fadeInterval);
+    };
+  }, []);
+
   return (
     <section
       id="about"
@@ -23,14 +85,22 @@ export default function About() {
       </h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-        <div className="flex">
-          <img
-            src="img/photoprofil.png"
-            alt="Sébastien Jourdain"
-            className="rounded-2xl object-cover w-full max-w-sm shadow-lg"
-          />
+        {/* ==== BLOC AVEC EFFET GOMME ==== */}
+        <div className="flex relative justify-center items-center">
+          <div className=" w-full max-w-sm rounded-md overflow-hidden shadow-lg">
+            <img
+              src="img/illu.png"
+              alt="Illustration de profil"
+              className="absolute rounded-md top-0 left-0 w-full h-full object-cover"
+            />
+            <canvas
+              ref={canvasRef}
+              className="absolute rounded-md top-0 left-0 w-full h-full"
+            />
+          </div>
         </div>
 
+        {/* ==== TEXTE ABOUT ==== */}
         <div className="bg-cards rounded-2xl p-5 border border-cards leading-normal flex flex-col col-span-2 pt-13 justify-between">
           <p className="mb-6 text-dominante">
             Je m'appelle Sébastien Jourdain, j'ai 24 ans et je suis originaire
@@ -61,6 +131,7 @@ export default function About() {
         </div>
       </div>
 
+      {/* ==== FORMATION & SOFTWARE ==== */}
       <div className="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="bg-cards rounded-2xl md:p-6 border border-cards">
           <h3 className="text-3xl text-center text-secondaire mb-6">
@@ -91,10 +162,7 @@ export default function About() {
           </h3>
           <div className="grid grid-cols-4 sm:grid-cols-4 gap-6">
             {skills.map((skill) => (
-              <div
-                key={skill.name}
-                className="text-center"
-              >
+              <div key={skill.name} className="text-center">
                 <img
                   src={skill.icon}
                   alt={skill.name}
