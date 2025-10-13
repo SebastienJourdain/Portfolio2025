@@ -2,6 +2,7 @@ import { getProjectById } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 export default function ProjectPage({ params }) {
   const project = getProjectById(params.id);
@@ -75,7 +76,23 @@ export default function ProjectPage({ params }) {
               ))}
             </div>
           </div>
+          <h2 className="text-4xl md:text-3xl font-heading text-accent">
+        Galerie photos
+      </h2>
         </div>
+      </div>
+      
+      <div className="w-7xl md:w-6xl grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-6 my-10">
+        {project.images.map((src, i) => (
+          <div key={i} className="relative w-full h-64 overflow-hidden">
+            <Image
+              src={src}
+              alt={`${project.title} image ${i + 1}`}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        ))}
       </div>
     </main>
   );
