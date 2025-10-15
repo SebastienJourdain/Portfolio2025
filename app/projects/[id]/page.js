@@ -12,7 +12,7 @@ export default function ProjectPage({ params }) {
   }
 
   return (
-    <main className="min-h-screen bg-dominante py-20">
+    <main className="min-h-screen bg-dominante py-10">
       <div className="max-w-6xl mx-auto px-6 mb-8 mt-15">
         <Link
           href="/#projects"
