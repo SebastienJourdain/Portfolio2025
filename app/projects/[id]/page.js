@@ -23,13 +23,13 @@ export default function ProjectPage({ params }) {
         </Link>
       </div>
       <div className="max-w-6xl  mt-15 mx-auto px-6">
-        <div className="flex justify-between">
-          <h1 className="text-4xl md:text-6xl font-heading uppercase text-secondaire mb-4">
+        <div className="md:flex justify-between">
+          <h1 className="text-5xl md:text-6xl font-heading uppercase text-secondaire mb-4">
             {project.title}
           </h1>
 
           {project.demoLink && (
-            <div className="flex ">
+            <div className=" flex ">
               <a
                 href={project.demoLink}
                 target="_blank"
@@ -40,7 +40,7 @@ export default function ProjectPage({ params }) {
                 <img
                   src="/img/icones/siteligne.svg"
                   alt="download icon"
-                  className="w-20 h-20"
+                  className="md:w-20 md:h-20 w-15 h-15"
                 />
               </a>
             </div>
@@ -52,7 +52,7 @@ export default function ProjectPage({ params }) {
           <strong className="text-accent font-normal">{project.date}</strong>
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-15">
+        <div className="md:grid md:grid-cols-1 md:grid-cols-3 gap-15">
           <div className="flex flex-col col-span-2">
             <h2 className="text-4xl mb-10 md:text-3xl font-heading text-accent">
               Description
@@ -61,7 +61,7 @@ export default function ProjectPage({ params }) {
           </div>
 
           <div>
-            <h2 className="text-4xl mb-10 md:text-3xl font-heading text-accent">
+            <h2 className="text-4xl my-10 md:text-3xl font-heading text-accent">
               Technologies utilisées
             </h2>
 
@@ -76,13 +76,14 @@ export default function ProjectPage({ params }) {
               ))}
             </div>
           </div>
-          <h2 className="text-4xl md:text-3xl font-heading text-accent">
+          
+        </div>
+        <h2 className="text-4xl mt-10 md:text-3xl font-heading text-accent">
         Galerie photos
       </h2>
-        </div>
-      </div>
       
-      <div className="w-7xl md:w-6xl grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-6 my-10">
+      
+      <div className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 gap-6 my-10">
         {project.images.map((src, i) => (
           <div key={i} className="relative w-full h-64 overflow-hidden">
             <Image
@@ -93,6 +94,7 @@ export default function ProjectPage({ params }) {
             />
           </div>
         ))}
+      </div>
       </div>
     </main>
   );

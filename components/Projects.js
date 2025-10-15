@@ -24,7 +24,7 @@ export default function Projects() {
 
               <div className="relative z-10 flex flex-col justify-between h-full p-6 text-white">
               <h4 className="mb-8 text-2xl text-dominante">{project.date}</h4>
-                <h3 className="mb-10 text-dominante text-center text-6xl">{project.title}</h3>
+                <h3 className="mb-10 break-words text-dominante text-center text-6xl">{project.title}</h3>
                 <p className="text-dominante inline-flex items-center gap-2 transition-colors">
                   Voir le projet <ArrowRight size={16} />
                 </p>
