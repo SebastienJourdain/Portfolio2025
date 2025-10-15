@@ -2,22 +2,22 @@ import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-between px-6 pb-0 py-20 bg-dominante">
-      <div className="w-full mt-75 text-center">
-        <h2 className="text-4xl md:text-7xl mb-8">contact@sebastienjourdain.com</h2>
+    <section id="contact" className="h-fit md:min-h-screen flex flex-col justify-between px-6 bg-dominante">
+      <div className="w-full md:mt-75 my-[10vh] text-center">
+        <h2 className="text-4xl md:text-7xl mb-8 break-words">contact@sebastienjourdain.com</h2>
         <p className="text-2xl">
           DISPONIBLE <strong className='text-accent'>MAINTENANT</strong>
         </p>
       </div>
 
       {/* Footer */}
-      <div className="py-8 flex justify-between">
+      <div className="py-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
 
         <div>
-          <p className='inline-block align-middle'>&copy; Sébastien Jourdain 2025 Tous droits réservés | Développé avec Next.js, React & Lenis scroll</p>
+          <p className='text-center md:inline-block'>&copy; Sébastien Jourdain 2025 Tous droits réservés | Développé avec Next.js, React & Lenis scroll</p>
         </div>
         
-        <div className="flex gap-6 justify-start">
+        <div className="flex mb-10 md:mb-0 gap-6 justify-start">
           <a
             href="https://github.com/yourusername"
             target="_blank"

@@ -27,19 +27,22 @@ export default function About() {
     illu.src = "img/illu.png"; 
 
     function resizeCanvas() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = canvas.offsetWidth * dpr;
+      canvas.height = canvas.offsetHeight * dpr;
+      ctx.scale(dpr, dpr);
+      
+      if (photo.complete) {
+        ctx.drawImage(photo, 0, 0, canvas.offsetWidth, canvas.offsetHeight);
+      }
     }
 
-    resizeCanvas();
-
     photo.onload = () => {
-      ctx.drawImage(photo, 0, 0, canvas.width, canvas.height);
+      resizeCanvas();
     };
 
     let fadeInterval;
 
-    // Effet gomme au survol
     function handleMove(e) {
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -54,11 +57,10 @@ export default function About() {
       clearInterval(fadeInterval);
     }
 
-    // Réapparition douce quand la souris part
     function handleLeave() {
       fadeInterval = setInterval(() => {
         ctx.globalAlpha = 0.08;
-        ctx.drawImage(photo, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(photo, 0, 0, canvas.offsetWidth, canvas.offsetHeight);
         ctx.globalAlpha = 1;
       }, 30);
     }
@@ -78,7 +80,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen px-6 py-20 bg-secondaire text-dominante"
+      className="min-h-screen px-6 py-20 pt-40 md:pt-auto bg-secondaire text-dominante"
     >
       <h2 className="text-4xl md:text-5xl mb-12 text-center">
         A propos de moi
@@ -86,8 +88,8 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
         {/* ==== BLOC AVEC EFFET GOMME ==== */}
-        <div className="flex relative justify-center items-center">
-          <div className=" w-full max-w-sm rounded-md overflow-hidden shadow-lg">
+        <div className="flex relative justify-center">
+          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 md:h-96">
             <img
               src="img/illu.png"
               alt="Illustration de profil"
@@ -106,7 +108,7 @@ export default function About() {
             Je m'appelle Sébastien Jourdain, j'ai 24 ans et je suis originaire
             de la ville de Thann en Alsace. J'ai réalisé mes études dans le web 
             en commençant par un DUT MMI (Métiers du multimédia et
-            de l’internet), puis une licence professionelle Webdesign tous deux
+            de l'internet), puis une licence professionelle Webdesign tous deux
             au département MMI de Montbéliard. J'ai par la suite souhaité 
             entrer dans le monde du travail en intégrant la hotline de Euro Protection
             Surveillance (homiris, télésurveillance pour particuliers) au sein de laquelle
@@ -133,7 +135,7 @@ export default function About() {
 
       {/* ==== FORMATION & SOFTWARE ==== */}
       <div className="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-cards rounded-2xl md:p-6 border border-cards">
+        <div className="bg-cards p-8 md:p-0 rounded-2xl md:p-6 border border-cards">
           <h3 className="text-3xl text-center text-secondaire mb-6">
             Formation
           </h3>
@@ -143,11 +145,11 @@ export default function About() {
           </p>
           <li className="font-bold ml-3.5 text-secondaire">2021 / 2022</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            Licence professionelle Webdesign à l’IUT de Belfort Montbéliard
+            Licence professionelle Webdesign à l'IUT de Belfort Montbéliard
           </p>
           <li className="font-bold ml-3 text-secondaire">2019 / 2021</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            DUT métiers du multimédia et de l’internet (MMI) à l’IUT de Belfort
+            DUT métiers du multimédia et de l'internet (MMI) à l'IUT de Belfort
             Montbéliard
           </p>
           <li className="font-bold ml-3.5 text-secondaire">2021</li>

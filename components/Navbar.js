@@ -31,15 +31,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed border border-dominante p-2 top-10 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+      className={`fixed left-1/2 -translate-x-1/2 border border-dominante p-2 px-8 w-fit top-10 transition-all z-50 ${
         scrolled ? 'bg-dominante border border-secondaire rounded-xl' : 'bg-transparent'
       }`}
     >
-      <div className="flex items-center justify-center">
+      <div className="flex justify-center">
         
-        <ul className="hidden md:flex gap-8 items-center">
+        <ul className=" md:flex gap-8 items-center">
           {navItems.map((item) => (
-            <li key={item.id}>
+            <li className=' text-center' key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
                 className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-accent transition-colors"
@@ -49,31 +49,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        <button
-          className="md:hidden text-slate-900"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
-
-      {menuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800">
-          <ul className="flex flex-col p-6 gap-4">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-lg text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </nav>
   )
 }
