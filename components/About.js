@@ -115,7 +115,7 @@ export default function About() {
             j'ai réalisé mes objectifs durant 2 ans et demi. J'ai maintenant décidé de reprendre
             mes études, et je suis depuis septembre en année préparatoire au Master en cybersécurité
             de Epitech Strasbourg. Dans le cadre de ce cursus je recherche une alternance en cybersécurité
-            à partir de janvier 2026 et jusqu'à septembre 2028. N'hésitez pas a me contacter si mon profil vous intéresse !
+            à partir de janvier 2026 et jusqu'à septembre 2028. N'hésitez pas à me contacter si mon profil vous intéresse !
           </p>
 
           <a
