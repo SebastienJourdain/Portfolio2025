@@ -39,10 +39,10 @@ export default function Navbar() {
         
         <ul className=" md:flex gap-8 items-center">
           {navItems.map((item) => (
-            <li className=' text-center' key={item.id}>
+            <li className='w-full text-center' key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-accent transition-colors"
+                className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-accent transition-colors whitespace-nowrap"
               >
                 {item.label}
               </button>

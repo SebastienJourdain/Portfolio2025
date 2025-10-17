@@ -19,7 +19,7 @@ export default function Contact() {
         
         <div className="flex mb-10 md:mb-0 gap-6 justify-start">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/SebastienJourdain/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-all hover:scale-110"
@@ -27,7 +27,7 @@ export default function Contact() {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/s%C3%A9bastien-jourdain-729a85196/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-all hover:scale-110"
@@ -35,7 +35,7 @@ export default function Contact() {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:your@email.com"
+            href="mailto:contact@sebastienjourdain.com"
             className="hover:text-accent transition-all hover:scale-110"
           >
             <Mail size={24} />
