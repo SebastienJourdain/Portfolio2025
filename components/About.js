@@ -119,7 +119,7 @@ export default function About() {
           </p>
 
           <a
-            href=""
+            href="Cv_Sebastien_Jourdain.pdf"
             download
             className="inline-flex text-lg text-bold text-secondaire items-center gap-2 w-fit"
           >
