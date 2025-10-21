@@ -42,7 +42,7 @@ export default function Navbar() {
             <li className='w-full text-center' key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-accent transition-colors whitespace-nowrap"
+                className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-violet transition-colors whitespace-nowrap"
               >
                 {item.label}
               </button>

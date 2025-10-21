@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="w-full md:mt-75 my-[10vh] text-center">
         <h2 className="text-4xl md:text-7xl mb-8 break-words">contact@sebastienjourdain.com</h2>
         <p className="text-2xl">
-          DISPONIBLE <strong className='text-accent'>MAINTENANT</strong>
+          DISPONIBLE <strong className='text-violet'>MAINTENANT</strong>
         </p>
       </div>
 
@@ -22,7 +22,7 @@ export default function Contact() {
             href="https://github.com/SebastienJourdain/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accent transition-all hover:scale-110"
+            className="hover:text-violet transition-all hover:scale-110"
           >
             <Github size={24} />
           </a>
@@ -30,13 +30,13 @@ export default function Contact() {
             href="https://www.linkedin.com/in/s%C3%A9bastien-jourdain-729a85196/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-accent transition-all hover:scale-110"
+            className="hover:text-violet transition-all hover:scale-110"
           >
             <Linkedin size={24} />
           </a>
           <a
             href="mailto:contact@sebastienjourdain.com"
-            className="hover:text-accent transition-all hover:scale-110"
+            className="hover:text-violet transition-all hover:scale-110"
           >
             <Mail size={24} />
           </a>
