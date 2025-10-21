@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { LiquidButton } from '@/components/ui/shadcn-io/liquid-button';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -40,12 +41,8 @@ export default function Navbar() {
         <ul className=" md:flex gap-8 items-center">
           {navItems.map((item) => (
             <li className='w-full text-center' key={item.id}>
-              <button
-                onClick={() => scrollToSection(item.id)}
-                className="cursor-pointer text-xl md:text-2xl text-secondaire hover:text-accent transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </button>
+              
+              <LiquidButton>{item.label}</LiquidButton>
             </li>
           ))}
         </ul>

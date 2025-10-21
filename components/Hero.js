@@ -1,6 +1,9 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { FlipButton } from '@/components/ui/shadcn-io/flip-button';
+import DecryptedText from '@/components/ui/shadcn-io/decrypted-text';
+import TextPressure from '@/components/ui/shadcn-io/text-pressure';
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -19,6 +22,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-secondaire">
             Étudiant en Master de cybersécurité à Epitech Strasbourg
           </p>
+
         </div>
 
         <p className="text-xl md:text-2xl text-secondaire ">[ SCROLL ]</p>

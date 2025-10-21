@@ -103,7 +103,7 @@ export default function About() {
         </div>
 
         {/* ==== TEXTE ABOUT ==== */}
-        <div className="bg-cards rounded-2xl p-5 border border-cards leading-normal flex flex-col col-span-2 pt-13 justify-between">
+        <div className="bg-cartes rounded-2xl p-5 border border-cartes leading-normal flex flex-col col-span-2 pt-13 justify-between">
           <p className="mb-6 text-dominante">
             Je m'appelle Sébastien Jourdain, j'ai 24 ans et je suis originaire
             de la ville de Thann en Alsace. J'ai réalisé mes études dans le web 
@@ -135,7 +135,7 @@ export default function About() {
 
       {/* ==== FORMATION & SOFTWARE ==== */}
       <div className="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-cards p-8 md:p-0 rounded-2xl md:p-6 border border-cards">
+        <div className="bg-cartes p-8 md:p-0 rounded-2xl md:p-6 border border-cartes">
           <h3 className="text-3xl text-center text-secondaire mb-6">
             Formation
           </h3>
@@ -158,7 +158,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="bg-cards rounded-2xl p-6 md:p-6 border border-cards">
+        <div className="bg-cartes rounded-2xl p-6 md:p-6 border border-cartes">
           <h3 className="text-3xl text-secondaire text-center mb-6">
             Softwares
           </h3>

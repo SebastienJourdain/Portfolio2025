@@ -16,7 +16,7 @@ export default function ProjectPage({ params }) {
       <div className="max-w-6xl mx-auto px-6 mb-8 mt-15">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-secondaire hover:text-accent transition-colors"
+          className="inline-flex items-center gap-2 text-secondaire hover:text-violet transition-colors"
         >
           <ArrowLeft size={20} />
           RETOUR
@@ -34,7 +34,7 @@ export default function ProjectPage({ params }) {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-secondaire hover:text-accent inline-flex text-lg text-bold text-secondaire items-center gap-2 w-fit transition-all"
+                className="text-secondaire hover:text-violet inline-flex text-lg text-bold text-secondaire items-center gap-2 w-fit transition-all"
               >
                 SITE EN LIGNE
                 <img
@@ -49,19 +49,19 @@ export default function ProjectPage({ params }) {
 
         <p className="text-xl text-secondaire mb-8">
           {project.shortDescription} |{" "}
-          <strong className="text-accent font-normal">{project.date}</strong>
+          <strong className="text-violet font-normal">{project.date}</strong>
         </p>
 
         <div className="md:grid md:grid-cols-1 md:grid-cols-3 gap-15">
           <div className="flex flex-col col-span-2">
-            <h2 className="text-4xl mb-10 md:text-3xl font-heading text-accent">
+            <h2 className="text-4xl mb-10 md:text-3xl font-heading text-violet">
               Description
             </h2>
             <p>{project.fullDescription}</p>
           </div>
 
           <div>
-            <h2 className="text-4xl my-10 md:text-3xl font-heading text-accent">
+            <h2 className="text-4xl my-10 md:text-3xl font-heading text-violet">
               Technologies utilisées
             </h2>
 
@@ -69,7 +69,7 @@ export default function ProjectPage({ params }) {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-cards uppercase text-white px-4 py-2 rounded-md text-sm"
+                  className="bg-cartes uppercase text-white px-4 py-2 rounded-md text-sm"
                 >
                   {tech}
                 </span>
@@ -78,7 +78,7 @@ export default function ProjectPage({ params }) {
           </div>
           
         </div>
-        <h2 className="text-4xl mt-10 md:text-3xl font-heading text-accent">
+        <h2 className="text-4xl mt-10 md:text-3xl font-heading text-violet">
         Galerie photos
       </h2>
       
