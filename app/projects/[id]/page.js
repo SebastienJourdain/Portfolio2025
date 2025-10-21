@@ -16,7 +16,7 @@ export default function ProjectPage({ params }) {
       <div className="max-w-6xl mx-auto px-6 mb-8 mt-15">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-secondaire hover:text-accent transition-colors"
+          className="inline-flex items-center gap-2 text-secondaire hover:text-violet transition-colors"
         >
           <ArrowLeft size={20} />
           RETOUR
