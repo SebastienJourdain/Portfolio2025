@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'text-primary hover:text-primary-foreground !bg-muted [--liquid-button-color:var(--primary)]',
+          'text-secondaire text-xl md:text-2xl hover:text-dominante !bg-dominante [--liquid-button-color:var(--color-secondaire)]',
         outline:
           'border !bg-background dark:!bg-input/30 dark:border-input [--liquid-button-color:var(--primary)]',
         secondary:
