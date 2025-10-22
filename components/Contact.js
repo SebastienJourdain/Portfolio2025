@@ -1,13 +1,39 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+"use client";
+
+import { Github, Linkedin, Mail } from 'lucide-react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function Contact() {
+  const sectionRef = useRef(null)
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  })
+  
+  const emailY = useTransform(scrollYProgress, [0, 1], [100, -100])
+  const availableY = useTransform(scrollYProgress, [0, 1], [150, -150])
+  
   return (
-    <section id="contact" className="h-fit md:min-h-screen flex flex-col justify-between px-6 bg-dominante">
+    <section 
+      ref={sectionRef}
+      id="contact" 
+      className="h-fit md:min-h-screen flex flex-col justify-between px-6 bg-dominante"
+    >
       <div className="w-full md:mt-75 my-[10vh] text-center">
-        <h2 className="text-4xl md:text-7xl mb-8 break-words">contact@sebastienjourdain.com</h2>
-        <p className="text-2xl">
+        <motion.h2 
+          style={{ y: emailY }}
+          className="text-4xl md:text-7xl mb-8 break-words"
+        >
+          contact@sebastienjourdain.com
+        </motion.h2>
+        <motion.p 
+          style={{ y: availableY }}
+          className="text-2xl"
+        >
           DISPONIBLE <strong className='text-violet'>MAINTENANT</strong>
-        </p>
+        </motion.p>
       </div>
 
       {/* Footer */}
