@@ -16,14 +16,14 @@ export default function NotFound() {
           Page Introuvable
         </h2>
         
-        <p className="text-xl text-accent mb-12">
+        <p className="text-xl text-violet mb-12">
           Il semblerait que la page que vous recherchez n'existe pas
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
-            className="bg-cards text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
+            className="bg-cards text-secondaire px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
           >
             <Home size={20} />
             Retourner à l'accueil
@@ -31,7 +31,7 @@ export default function NotFound() {
           
           <button
             onClick={() => window.history.back()}
-            className="bg-accent cursor-pointer text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
+            className="bg-violet cursor-pointer text-secondaire px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
           >
             <ArrowLeft size={20} />
             Page précédente

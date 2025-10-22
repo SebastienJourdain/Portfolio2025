@@ -19,22 +19,24 @@ export default function Contact() {
     <section 
       ref={sectionRef}
       id="contact" 
-      className="h-fit md:min-h-screen flex flex-col justify-between px-6 bg-dominante"
+      className="min-h-screen flex flex-col justify-between px-6 bg-dominante"
     >
-      <div className="w-full md:mt-75 my-[10vh] text-center">
-        <motion.h2 
-          style={{ y: emailY }}
-          className="text-4xl md:text-7xl mb-8 break-words"
-        >
-          contact@sebastienjourdain.com
-        </motion.h2>
-        <motion.p 
-          style={{ y: availableY }}
-          className="text-2xl"
-        >
-          DISPONIBLE <strong className='text-violet'>MAINTENANT</strong>
-        </motion.p>
-      </div>
+      <div className="flex-1 flex items-center justify-center">
+  <div className="w-full text-center flex flex-col gap-8">
+    <motion.h2 
+      style={{ y: emailY }}
+      className="text-4xl md:text-7xl break-words"
+    >
+      contact@sebastienjourdain.com
+    </motion.h2>
+    <motion.p 
+      style={{ y: availableY }}
+      className="text-2xl"
+    >
+      DISPONIBLE <strong className='text-violet'>MAINTENANT</strong>
+    </motion.p>
+  </div>
+</div>
 
       {/* Footer */}
       <div className="py-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
