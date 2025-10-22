@@ -57,7 +57,7 @@ function FlipButton({
         transition={transition}
         className={cn(
           DEFAULT_SPAN_CLASS_NAME,
-          'bg-muted text-black dark:text-white',
+          'bg-fond text-secondaire',
           frontClassName
         )}>
         {frontText}

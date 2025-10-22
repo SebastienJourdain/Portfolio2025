@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import DecryptedText from '@/components/ui/shadcn-io/decrypted-text';
 
 export default function About() {
   const skills = [
@@ -22,16 +23,16 @@ export default function About() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const photo = new Image();
-    photo.src = "img/photoprofil.png"; 
+    photo.src = "img/photoprofil.png";
     const illu = new Image();
-    illu.src = "img/illu.png"; 
+    illu.src = "img/illu.png";
 
     function resizeCanvas() {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = canvas.offsetWidth * dpr;
       canvas.height = canvas.offsetHeight * dpr;
       ctx.scale(dpr, dpr);
-      
+
       if (photo.complete) {
         ctx.drawImage(photo, 0, 0, canvas.offsetWidth, canvas.offsetHeight);
       }
@@ -106,24 +107,34 @@ export default function About() {
         <div className="bg-cartes rounded-2xl p-5 border border-cartes leading-normal flex flex-col col-span-2 pt-13 justify-between">
           <p className="mb-6 text-dominante">
             Je m'appelle Sébastien Jourdain, j'ai 24 ans et je suis originaire
-            de la ville de Thann en Alsace. J'ai réalisé mes études dans le web 
-            en commençant par un DUT MMI (Métiers du multimédia et
-            de l'internet), puis une licence professionelle Webdesign tous deux
-            au département MMI de Montbéliard. J'ai par la suite souhaité 
-            entrer dans le monde du travail en intégrant la hotline de Euro Protection
-            Surveillance (homiris, télésurveillance pour particuliers) au sein de laquelle
-            j'ai réalisé mes objectifs durant 2 ans et demi. J'ai maintenant décidé de reprendre
-            mes études, et je suis depuis septembre en année préparatoire au Master en cybersécurité
-            de Epitech Strasbourg. Dans le cadre de ce cursus je recherche une alternance en cybersécurité
-            à partir de janvier 2026 et jusqu'à septembre 2028. N'hésitez pas à me contacter si mon profil vous intéresse !
+            de la ville de Thann en Alsace. J'ai réalisé mes études dans le web
+            en commençant par un DUT MMI (Métiers du multimédia et de
+            l'internet), puis une licence professionelle Webdesign tous deux au
+            département MMI de Montbéliard. J'ai par la suite souhaité entrer
+            dans le monde du travail en intégrant la hotline de Euro Protection
+            Surveillance (homiris, télésurveillance pour particuliers) au sein
+            de laquelle j'ai réalisé mes objectifs durant 2 ans et demi. J'ai
+            maintenant décidé de reprendre mes études, et je suis depuis
+            septembre en année préparatoire au Master en cybersécurité de
+            Epitech Strasbourg. Dans le cadre de ce cursus je recherche une
+            alternance en cybersécurité à partir de janvier 2026 et jusqu'à
+            septembre 2028. N'hésitez pas à me contacter si mon profil vous
+            intéresse !
           </p>
 
           <a
             href="Cv_Sebastien_Jourdain.pdf"
             download
-            className="inline-flex text-lg text-bold text-secondaire items-center gap-2 w-fit"
+            className="inline-flex text-lg font-bold text-secondaire items-center gap-2 w-fit"
           >
-            TÉLÉCHARGER MON CV
+            <DecryptedText
+              text="Télécharger mon CV"
+              speed={60}
+              maxIterations={15}
+              sequential={false}
+              encryptedClassName="text-lg text-secondaire"
+              animateOn="hover"
+            />
             <img
               src="img/icones/cvdownload.svg"
               alt="download icon"

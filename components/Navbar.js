@@ -41,8 +41,7 @@ export default function Navbar() {
         <ul className=" md:flex gap-8 items-center">
           {navItems.map((item) => (
             <li className='w-full text-center' key={item.id}>
-              
-              <LiquidButton>{item.label}</LiquidButton>
+              <LiquidButton onClick={() => scrollToSection(item.id)}>{item.label}</LiquidButton>
             </li>
           ))}
         </ul>
