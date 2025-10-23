@@ -24,8 +24,8 @@ export default function Hero() {
 
   useEffect(() => {
     const totalLetters = letterRefs.current.length;
-    const duration = 1200; 
-    const delayPerLetter = 250;
+    const duration = 1000; 
+    const delayPerLetter = 200;
     const totalAnimationTime = duration + delayPerLetter * (totalLetters - 1);
     const fillDuration = 1000;
   

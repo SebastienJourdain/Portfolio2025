@@ -87,10 +87,10 @@ export default function About() {
         A propos de moi
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
         {/* ==== BLOC AVEC EFFET GOMME ==== */}
         <div className="flex relative justify-center">
-          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 md:h-96">
+          <div className="relative w-[30vh] md:w-full max-w-sm rounded-2xl overflow-hidden shadow-lg h-[30vh] md:h-[40vh]">
             <img
               src="img/illu.png"
               alt="Illustration de profil"
