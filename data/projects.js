@@ -84,6 +84,22 @@ export const projects = [
       demoLink: 'https://projetindiv.sebastienjourdain.com/',
     },
     {
+      id: 'Ponos',
+      title: '<Ponos>',
+      date: '2025',
+      shortDescription: "Jobboard",
+      fullDescription: "Ponos constitue mon projet web réalisé en pré Master à Epitech en groupe de 3. Nous avions pour consigne de développer un jobboard responsive permettant à deux types d'utilisateurs, candidats et entreprises de pouvoir poster des offres d'emplois pour les entreprises, et d'y postuler pour les candidats. Chaque profil dispose d'un espace profil lui permettant de gérer ses informations personelles, ses candidatures ou ses offres postées. Ainsi est né Ponos, en référence au dieu grec du travail. Le choix des technologies nous a été laissé et nous sommes partis sur un front en react et tailwindcss, laravel nous a permis de faire le pont entre le front et le back, et la base de données à été créée via PostgreSQL. Nous avons tous les trois travaillé sur toutes les phases du projet afin que nous puissions ếtre polyvalents à la fin.",
+      technologies: ['Figma', 'React', 'Tailwind', 'Laravel', 'Postgre'],
+      fond: '/img/mockups/Ponos.png',
+      images: [
+        '/img/galeriesprojets/Ponos1.png',
+        '/img/galeriesprojets/Ponos2.png',
+        '/img/galeriesprojets/Ponos3.png',
+        '/img/galeriesprojets/Ponos4.png',
+        '/img/galeriesprojets/Ponos5.png',
+      ],
+    },
+    {
       id: 'o80',
       title: '<O80>',
       date: '2021 / 2022',
