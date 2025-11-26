@@ -94,7 +94,7 @@ export default function Hero() {
             className="text-xl lg:text-2xl text-secondaire"
           >
             <TypingText
-              text={["Étudiant en Master de cybersécurité à Epitech Strasbourg"]}
+              text={["Étudiant en Master of science à Epitech Strasbourg"]}
               typingSpeed={120}
               pauseDuration={1500}
               showCursor={true}
