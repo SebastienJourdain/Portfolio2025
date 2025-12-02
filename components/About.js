@@ -152,7 +152,7 @@ export default function About() {
           </h3>
           <li className="font-bold ml-3.5 text-secondaire">2025 / 2028</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            Master en cybersécurité à EPITECH Strasbourg
+            Master of science à EPITECH Strasbourg
           </p>
           <li className="font-bold ml-3.5 text-secondaire">2021 / 2022</li>
           <p className="border-l-2 pl-3 border-secondaire">
