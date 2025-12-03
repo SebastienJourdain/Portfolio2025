@@ -8,13 +8,14 @@ export default function About() {
     { name: "Figma", icon: "img/icones/figma.svg" },
     { name: "Suite Adobe", icon: "img/icones/adobe.svg" },
     { name: "HTML", icon: "img/icones/html.svg" },
-    { name: "Joomla", icon: "img/icones/joomla.svg" },
+    { name: "Java", icon: "img/icones/java.svg" },
     { name: "JavaScript", icon: "img/icones/js.svg" },
     { name: "PHP", icon: "img/icones/php.svg" },
     { name: "Vue.js", icon: "img/icones/vuejs.svg" },
     { name: "Wordpress", icon: "img/icones/wordpress.svg" },
     { name: "React", icon: "img/icones/react.svg" },
     { name: "Next.js", icon: "img/icones/next.svg" },
+    { name: "Docker", icon: "img/icones/docker.svg" },
   ];
 
   const canvasRef = useRef(null);
@@ -123,7 +124,7 @@ export default function About() {
           </p>
 
           <a
-            href="Cv_Sebastien_Jourdain.pdf"
+            href="Cv_Sébastien_Jourdain.pdf"
             download
             className="inline-flex text-lg font-bold text-secondaire items-center gap-2 w-fit"
           >
