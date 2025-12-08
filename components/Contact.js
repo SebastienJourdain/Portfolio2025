@@ -33,7 +33,7 @@ export default function Contact() {
       style={{ y: availableY }}
       className="text-2xl"
     >
-      DISPONIBLE <strong className='text-violet'>MAINTENANT</strong>
+      DISPONIBLE POUR TOUT PROJET<strong className='text-violet'> EN FREELANCE</strong>
     </motion.p>
   </div>
 </div>
@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="py-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
 
         <div>
-          <p className='text-center md:inline-block'>&copy; Sébastien Jourdain 2025 Tous droits réservés | Développé avec Next.js, React & Lenis scroll</p>
+          <p className='text-center md:inline-block'>&copy; Sébastien Jourdain 2026 Tous droits réservés | Développé avec Next.js, React & Lenis scroll</p>
         </div>
         
         <div className="flex mb-10 md:mb-0 gap-6 justify-start">

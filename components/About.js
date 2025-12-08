@@ -115,10 +115,10 @@ export default function About() {
             Surveillance (homiris, télésurveillance pour particuliers) au sein
             de laquelle j'ai réalisé mes objectifs durant 2 ans et demi. J'ai
             maintenant décidé de reprendre mes études, et je suis depuis
-            septembre en année préparatoire au Master en cybersécurité de
-            Epitech Strasbourg. Dans le cadre de ce cursus je recherche une
-            alternance dans les domaines du dévleoppement web ou de la cybersécurité à partir de janvier 2026 et jusqu'à
-            septembre 2028. N'hésitez pas à me contacter si mon profil vous
+            septembre en année préparatoire au Master of science de
+            Epitech Strasbourg. Dans le cadre de ce cursus, je suis en alternance chez Arkedia en tant que
+            développeur web. Je reste néanmoins ouvert à tout projet en freelance
+            qui puisse m'apporter de nouvelles expériences, alors n'hésitez pas à me contacter si mon profil vous
             intéresse !
           </p>
 
@@ -127,14 +127,8 @@ export default function About() {
             download
             className="inline-flex text-lg font-bold text-secondaire items-center gap-2 w-fit"
           >
-            <DecryptedText
-              text="Télécharger mon CV"
-              speed={60}
-              maxIterations={15}
-              sequential={false}
-              encryptedClassName="text-lg text-secondaire"
-              animateOn="hover"
-            />
+            Télécharger mon CV
+  
             <img
               src="img/icones/cvdownload.svg"
               alt="download icon"
@@ -152,15 +146,15 @@ export default function About() {
           </h3>
           <li className="font-bold ml-3.5 text-secondaire">2025 / 2028</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            Master en cybersécurité à EPITECH Strasbourg
+            Master of science | EPITECH Strasbourg
           </p>
           <li className="font-bold ml-3.5 text-secondaire">2021 / 2022</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            Licence professionelle Webdesign à l'IUT de Belfort Montbéliard
+            Licence professionelle Webdesign | IUT de Belfort Montbéliard
           </p>
           <li className="font-bold ml-3 text-secondaire">2019 / 2021</li>
           <p className="border-l-2 pl-3 border-secondaire">
-            DUT métiers du multimédia et de l'internet (MMI) à l'IUT de Belfort
+            DUT métiers du multimédia et de l'internet (MMI) | IUT de Belfort
             Montbéliard
           </p>
           <li className="font-bold ml-3.5 text-secondaire">2021</li>
