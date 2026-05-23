@@ -4,58 +4,34 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @theme {
+  /* Couleurs custom */
   --color-dominante: #CCC9DC;
   --color-secondaire: #020122;
   --color-violet: #7A6174;
   --color-cartes: #597081;
-}
 
-body {
-  overflow-x: hidden;
-}
+  /* Fonts */
+  --font-heading: 'BelyDisplay', serif;
+  --font-body: 'UbuntuMono', monospace;
 
-html {
-  scroll-behavior: auto;
-}
+  /* Spacing custom */
+  --spacing-1vw: 1vw;
+  --spacing-2vw: 2vw;
+  --spacing-5vw: 5vw;
+  --spacing-10vw: 10vw;
+  --spacing-1vh: 1vh;
+  --spacing-5vh: 5vh;
+  --spacing-10vh: 10vh;
+  --spacing-20vh: 20vh;
 
-/* Your custom fonts */
-@font-face {
-  font-family: 'BelyDisplay';
-  src: url('/fonts/Bely-Display-W00-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  font-size: 40%;
-}
-
-@font-face {
-  font-family: 'UbuntuMono';
-  src: url('/fonts/UbuntuMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  font-size: 15%;
-}
-
-/* Apply fonts */
-body {
-  font-family: 'UbuntuMono', monospace;
-}
-
-h1, h2, h3, h4{
-  font-family: 'BelyDisplay', serif;
-}
-
-@theme inline {
+  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Couleurs shadcn/ui */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -89,6 +65,24 @@ h1, h2, h3, h4{
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'BelyDisplay';
+  src: url('/fonts/Bely-Display-W00-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url('/fonts/UbuntuMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables CSS */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -162,23 +156,33 @@ h1, h2, h3, h4{
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'UbuntuMono', monospace;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'BelyDisplay', serif;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 
   @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 1s ease-out 3s both;
-        }
-}
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
+  .animate-fade-in {
+    animation: fade-in 1s ease-out 3s both;
+  }
+}

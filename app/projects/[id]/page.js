@@ -29,14 +29,14 @@ export default function ProjectPage({ params }) {
           </h1>
 
           {project.demoLink && (
-            <div className=" flex ">
+            <div className="flex">
               <a
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-secondaire hover:text-violet inline-flex text-lg text-bold text-secondaire items-center gap-2 w-fit transition-all"
+                className="text-secondaire hover:text-violet inline-flex text-lg text-bold items-center gap-2 w-fit transition-all"
               >
-                SITE EN LIGNE
+                {project.demoLink.endsWith(".git") ? "REPO GITHUB" : "SITE EN LIGNE"}
                 <img
                   src="/img/icones/siteligne.svg"
                   alt="download icon"
@@ -52,7 +52,7 @@ export default function ProjectPage({ params }) {
           <strong className="text-violet font-normal">{project.date}</strong>
         </p>
 
-        <div className="md:grid md:grid-cols-1 md:grid-cols-3 gap-15">
+        <div className="md:grid md:grid-cols-3 gap-15">
           <div className="flex flex-col col-span-2">
             <h2 className="text-4xl mb-10 md:text-3xl font-heading text-violet">
               Description
@@ -76,25 +76,25 @@ export default function ProjectPage({ params }) {
               ))}
             </div>
           </div>
-          
+
         </div>
         <h2 className="text-4xl mt-10 md:text-3xl font-heading text-violet">
-        Galerie photos
-      </h2>
-      
-      
-      <div className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 gap-6 my-10">
-        {project.images.map((src, i) => (
-          <div key={i} className="relative w-full h-64 overflow-hidden">
-            <Image
-              src={src}
-              alt={`${project.title} image ${i + 1}`}
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))}
-      </div>
+          Galerie photos
+        </h2>
+
+
+        <div className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 gap-6 my-10">
+          {project.images.map((src, i) => (
+            <div key={i} className="relative w-full h-64 overflow-hidden">
+              <Image
+                src={src}
+                alt={`${project.title} image ${i + 1}`}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
