@@ -1,5 +1,4 @@
 import './globals.css';
-import Head from 'next/head';
 
 export const metadata = {
   title: 'Sebastien Jourdain - Portfolio',
@@ -9,9 +8,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body>{children}</body>
     </html>
   )
